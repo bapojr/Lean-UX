@@ -1,11 +1,13 @@
 const promptInput = document.querySelector("#prompt-input");
 const greeting = document.querySelector("#greeting");
 const inputFocusTarget = document.querySelector("#input-focus-target");
+const chatCard = document.querySelector(".chat-card");
 const tabButtons = Array.from(document.querySelectorAll(".tab-button"));
 const panelViews = Array.from(document.querySelectorAll(".panel-view"));
 const sheetOverlay = document.querySelector("#sheet-overlay");
 const moreSheet = document.querySelector("#more-sheet");
 const closeMoreButton = document.querySelector("#close-more");
+const checksUploadCard = document.querySelector("#checks-upload-card");
 const checksContainer = document.querySelector("#checks-pills");
 const checksCta = document.querySelector("#checks-cta");
 const checksNote = document.querySelector("#checks-note");
@@ -239,6 +241,8 @@ function switchTab(nextTab) {
   activeTab = nextTab;
   closeMoreSheet();
   closeSuggestionSheet();
+  chatCard.classList.toggle("mode-checks", nextTab === "checks");
+  checksUploadCard.setAttribute("aria-hidden", nextTab === "checks" ? "false" : "true");
 
   tabButtons.forEach((button) => button.classList.toggle("active", button.dataset.tab === nextTab));
 

@@ -118,6 +118,10 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.88);
 }
 
+.chat-card.mode-checks .input-wrap {
+  display: none;
+}
+
 .input-wrap:focus-within {
   box-shadow: 0 22px 54px rgba(54, 72, 101, 0.18), 0 0 0 2px #0054f1;
 }
@@ -152,6 +156,65 @@ textarea::placeholder {
   background: #f7f8fb;
   box-shadow: inset 0 0 0 1px rgba(71, 85, 105, 0.1);
   font-size: 22px;
+}
+
+.checks-upload-card {
+  border-radius: 28px;
+  background: #fff;
+  box-shadow: var(--shadow);
+  border: 1px solid rgba(216, 224, 238, 0.9);
+  padding: 24px 20px 22px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.chat-card.mode-checks .checks-upload-card {
+  display: flex;
+}
+
+.upload-doc-icon {
+  width: 52px;
+  height: 66px;
+  border-radius: 12px;
+  border: 1px solid #d8e0ee;
+  background: linear-gradient(180deg, #ffffff 0%, #f4f7fd 100%);
+  color: #1f63e9;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 18px;
+}
+
+.upload-copy {
+  margin: 0 0 18px;
+  color: #5f6f91;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 28px;
+}
+
+.upload-cta {
+  border: 0;
+  border-radius: 14px;
+  background: #1768f2;
+  color: #fff;
+  padding: 14px 22px;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+  cursor: pointer;
+  box-shadow: 0 10px 24px rgba(23, 104, 242, 0.18);
+}
+
+.upload-cta:hover {
+  transform: translateY(-1px);
 }
 
 .tab-strip {
