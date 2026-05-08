@@ -99,10 +99,14 @@ body {
 
 .hero h1 {
   margin: 0;
-  font-family: "Fraunces", serif;
-  font-size: 35px;
-  line-height: 1.04;
-  letter-spacing: -0.03em;
+  color: #051e57;
+  text-align: center;
+  font-feature-settings: "liga" off, "clig" off;
+  font-family: "IBM Plex Serif", serif;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 36px;
 }
 
 .chat-card {
