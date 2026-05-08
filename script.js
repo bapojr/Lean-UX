@@ -15,35 +15,35 @@ const checksCta = document.querySelector("#checks-cta");
 const checksNote = document.querySelector("#checks-note");
 
 const chatOptions = {
-  "✏️ Rewrite": [
+  Rewrite: [
     "Rewrite this paragraph for a journal introduction",
     "Make this sentence more formal",
     "Rewrite for a non-expert audience",
     "Improve clarity without changing meaning",
     "Rewrite in active voice",
   ],
-  "🔄 Paraphrase": [
+  Paraphrase: [
     "Paraphrase this to avoid repetition",
     "Paraphrase and simplify technical jargon",
     "Paraphrase for a literature review",
     "Reword this passage to sound more original",
     "Paraphrase without losing key citations",
   ],
-  "🎭 Tone": [
+  Tone: [
     "Make this more formal and academic",
     "Adjust tone to sound less aggressive",
     "Make this persuasive for a grant proposal",
     "Soften the tone of this critique",
     "Match the tone of the abstract to the conclusion",
   ],
-  "✂️ Trim": [
+  Trim: [
     "Trim this paragraph to 50 words",
     "Remove redundant phrases from this section",
     "Shorten this conclusion without losing key findings",
     "Make this abstract more concise",
     "Cut filler words from this passage",
   ],
-  "🌐 Translate": [
+  Translate: [
     "Translate this abstract to Spanish",
     "Translate and preserve academic terminology",
     "Translate this section to French for a co-author",
@@ -53,21 +53,21 @@ const chatOptions = {
 };
 
 const illustrateOptions = {
-  "🪧 Posters": [
+  Posters: [
     "Create a conference poster for my research",
     "Design a poster summarising my methodology",
     "Generate a poster for a public science event",
     "Make a minimalist academic poster from this abstract",
     "Create a bilingual research poster",
   ],
-  "📊 Infographics": [
+  Infographics: [
     "Visualise my research timeline as an infographic",
     "Create an infographic comparing two methodologies",
     "Turn my key findings into a shareable infographic",
     "Generate a step-by-step process infographic",
     "Make an infographic showing sample size distribution",
   ],
-  "🔬 Graphical Abstract": [
+  "Graphical Abstract": [
     "Create a graphical abstract from my abstract",
     "Design a simple visual summary of my paper",
     "Generate a graphical abstract for a Nature-style journal",
@@ -77,11 +77,11 @@ const illustrateOptions = {
 };
 
 const checksOptions = [
-  "🔍 Plagiarism",
-  "🤖 AI Detection",
-  "📝 Grammar",
-  "📚 References",
-  "📤 Submission",
+  "Plagiarism",
+  "AI Detection",
+  "Grammar",
+  "References",
+  "Submission",
 ];
 
 let activeTab = "chat";
