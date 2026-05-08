@@ -37,7 +37,7 @@ body {
 .app-shell {
   width: 100%;
   min-height: 100vh;
-  padding: 0 14px;
+  padding: 0 14px 0;
   display: flex;
   justify-content: center;
 }
@@ -45,7 +45,7 @@ body {
 .phone-frame {
   width: min(100%, 360px);
   margin: 0 auto;
-  padding: 14px 0 24px;
+  padding: 0 0 24px;
   background: var(--bg);
   min-height: 100vh;
   display: flex;
@@ -73,18 +73,25 @@ body {
 }
 
 .icon-button {
-  width: 24px;
-  height: 24px;
+  width: 18px;
+  height: 18px;
   border-radius: 0;
   background: transparent;
   box-shadow: none;
   padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
 }
 
 .icon {
-  font-size: 28px;
-  line-height: 1;
+  font-size: 18px;
+  line-height: 18px;
   color: #677083;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .icon-button,
