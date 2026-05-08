@@ -37,7 +37,7 @@ body {
 .app-shell {
   width: 100%;
   min-height: 100vh;
-  padding: 18px 14px 32px;
+  padding: 0 14px;
   display: flex;
   justify-content: center;
 }
@@ -45,9 +45,12 @@ body {
 .phone-frame {
   width: min(100%, 360px);
   margin: 0 auto;
-  padding: 14px 0 120px;
+  padding: 14px 0 24px;
   background: var(--bg);
-  min-height: calc(100vh - 50px);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
 }
 
 .topbar,
@@ -217,6 +220,11 @@ textarea::placeholder {
 
 .tab-panels {
   position: relative;
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
 }
 
 .panel-view {
@@ -226,7 +234,9 @@ textarea::placeholder {
 }
 
 .panel-view.active {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
   animation: fadeUp 220ms ease forwards;
 }
 
@@ -378,6 +388,11 @@ textarea::placeholder {
   box-shadow: var(--shadow);
   padding: 16px;
   margin-top: 2px;
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
 .suggestion-card-header {
@@ -410,6 +425,9 @@ textarea::placeholder {
 
 .suggestion-card-list {
   display: grid;
+  overflow-y: auto;
+  min-height: 0;
+  padding-right: 4px;
 }
 
 .suggestion-option {
