@@ -105,6 +105,20 @@ function createCheckPill(label, isSelected, onClick) {
   button.className = `feature-pill check-pill ${isSelected ? "selected" : ""}`.trim();
   marker.className = "check-pill-box";
   marker.setAttribute("aria-hidden", "true");
+  if (isSelected) {
+    marker.innerHTML = `
+      <svg xmlns="http://www.w3.org/2000/svg" width="11" height="12" viewBox="0 0 11 12" fill="none">
+        <g clip-path="url(#clip0_336_8964)">
+          <path d="M10.1905 1.64316C10.5257 1.88691 10.6007 2.35566 10.3569 2.69082L4.35693 10.9408C4.22803 11.1189 4.02881 11.2291 3.8085 11.2478C3.58818 11.2666 3.3749 11.1846 3.22022 11.0299L0.220215 8.02988C-0.0727539 7.73691 -0.0727539 7.26113 0.220215 6.96816C0.513184 6.67519 0.988965 6.67519 1.28193 6.96816L3.66084 9.34707L9.14522 1.80722C9.38897 1.47207 9.85772 1.39707 10.1929 1.64082L10.1905 1.64316Z" fill="white"/>
+        </g>
+        <defs>
+          <clipPath id="clip0_336_8964">
+            <rect width="10.5" height="12" fill="white"/>
+          </clipPath>
+        </defs>
+      </svg>
+    `;
+  }
   text.className = "check-pill-label";
   text.textContent = label;
 

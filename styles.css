@@ -274,10 +274,10 @@ textarea::placeholder {
   display: inline-flex;
   align-items: center;
   gap: 12px;
-  padding: 0;
-  border: 0;
-  background: transparent;
-  border-radius: 0;
+  padding: 12px 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(71, 85, 105, 0.14);
+  background: #fff;
   font-family: "IBM Plex Sans", sans-serif;
   font-size: 16px;
   font-style: normal;
@@ -287,13 +287,15 @@ textarea::placeholder {
 }
 
 .check-pill-box {
-  width: 36px;
-  height: 36px;
-  border-radius: 4px;
-  border: 2px solid #c8d3e8;
+  width: 16px;
+  height: 16px;
+  border-radius: 1.6px;
+  border: 1px solid #cad5e7;
   background: #fff;
-  position: relative;
   flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .check-pill-label {
@@ -301,20 +303,8 @@ textarea::placeholder {
 }
 
 .check-pill.selected .check-pill-box {
-  border-color: #1768f2;
-  background: #1768f2;
-}
-
-.check-pill.selected .check-pill-box::after {
-  content: "";
-  position: absolute;
-  left: 11px;
-  top: 5px;
-  width: 8px;
-  height: 16px;
-  border: solid #fff;
-  border-width: 0 3px 3px 0;
-  transform: rotate(45deg);
+  border-color: #0062ff;
+  background: #0062ff;
 }
 
 .feature-pill.selected,
@@ -325,8 +315,12 @@ textarea::placeholder {
 }
 
 .check-pill.selected {
-  background: transparent;
+  background: #fff;
   color: #16387a;
+}
+
+.check-pill-box svg {
+  display: block;
 }
 
 .feature-pill:hover,
