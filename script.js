@@ -212,26 +212,6 @@ function openSuggestionSheet(title, options) {
 
   inlineSuggestionCard.classList.remove("hidden");
   inlineSuggestionCard.setAttribute("aria-hidden", "false");
-
-  requestAnimationFrame(() => {
-    const cardTop = inlineSuggestionCard.offsetTop;
-    const cardBottom = cardTop + inlineSuggestionCard.offsetHeight;
-    const frameTop = phoneFrame.scrollTop;
-    const frameBottom = frameTop + phoneFrame.clientHeight;
-    const bottomPadding = 20;
-
-    if (cardBottom + bottomPadding > frameBottom) {
-      phoneFrame.scrollTo({
-        top: cardBottom - phoneFrame.clientHeight + bottomPadding,
-        behavior: "smooth",
-      });
-    } else if (cardTop < frameTop) {
-      phoneFrame.scrollTo({
-        top: Math.max(cardTop - 12, 0),
-        behavior: "smooth",
-      });
-    }
-  });
 }
 
 function closeSuggestionSheet() {
