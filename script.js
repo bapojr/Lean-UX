@@ -96,6 +96,24 @@ function createPill(label, onClick, className = "") {
   return button;
 }
 
+function createCheckPill(label, isSelected, onClick) {
+  const button = document.createElement("button");
+  const marker = document.createElement("span");
+  const text = document.createElement("span");
+
+  button.type = "button";
+  button.className = `feature-pill check-pill ${isSelected ? "selected" : ""}`.trim();
+  marker.className = "check-pill-box";
+  marker.setAttribute("aria-hidden", "true");
+  text.className = "check-pill-label";
+  text.textContent = label;
+
+  button.append(marker, text);
+  button.addEventListener("click", onClick);
+
+  return button;
+}
+
 function populateSingleSelectPills(containerId, optionsMap) {
   const container = document.querySelector(containerId);
   const labels = Object.keys(optionsMap);
@@ -115,8 +133,9 @@ function renderChecks() {
 
   checksOptions.forEach((label) => {
     const isSelected = selectedChecks.has(label);
-    const pill = createPill(
+    const pill = createCheckPill(
       label,
+      isSelected,
       () => {
         if (selectedChecks.has(label)) {
           selectedChecks.delete(label);
@@ -125,8 +144,7 @@ function renderChecks() {
         }
 
         renderChecks();
-      },
-      isSelected ? "selected" : ""
+      }
     );
 
     checksContainer.appendChild(pill);
