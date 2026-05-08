@@ -3,6 +3,7 @@ const greeting = document.querySelector("#greeting");
 const inputFocusTarget = document.querySelector("#input-focus-target");
 const chatCard = document.querySelector(".chat-card");
 const sendCta = document.querySelector("#send-cta");
+const illustrateTools = document.querySelector("#illustrate-tools");
 const tabButtons = Array.from(document.querySelectorAll(".tab-button"));
 const panelViews = Array.from(document.querySelectorAll(".panel-view"));
 const sheetOverlay = document.querySelector("#sheet-overlay");
@@ -249,7 +250,9 @@ function switchTab(nextTab) {
   closeMoreSheet();
   closeSuggestionSheet();
   chatCard.classList.toggle("mode-checks", nextTab === "checks");
+  chatCard.classList.toggle("mode-illustrate", nextTab === "illustrate");
   checksUploadCard.setAttribute("aria-hidden", nextTab === "checks" ? "false" : "true");
+  illustrateTools.setAttribute("aria-hidden", nextTab === "illustrate" ? "false" : "true");
 
   tabButtons.forEach((button) => button.classList.toggle("active", button.dataset.tab === nextTab));
 
