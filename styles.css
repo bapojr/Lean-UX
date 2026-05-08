@@ -174,23 +174,6 @@ textarea::placeholder {
   display: flex;
 }
 
-.upload-doc-icon {
-  width: 52px;
-  height: 66px;
-  border-radius: 12px;
-  border: 1px solid #d8e0ee;
-  background: linear-gradient(180deg, #ffffff 0%, #f4f7fd 100%);
-  color: #1f63e9;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  font-family: "IBM Plex Sans", sans-serif;
-  font-size: 28px;
-  font-weight: 700;
-  line-height: 1;
-  margin-bottom: 18px;
-}
-
 .upload-copy {
   margin: 0 0 18px;
   color: #5f6f91;
