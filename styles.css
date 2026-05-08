@@ -38,6 +38,8 @@ body {
   width: 100%;
   min-height: 100vh;
   padding: 18px 14px 32px;
+  display: flex;
+  justify-content: center;
 }
 
 .phone-frame {
@@ -45,6 +47,7 @@ body {
   margin: 0 auto;
   padding: 14px 0 120px;
   background: var(--bg);
+  min-height: calc(100vh - 50px);
 }
 
 .topbar,
@@ -265,6 +268,10 @@ textarea::placeholder {
   padding-bottom: 4px;
 }
 
+.single-select {
+  margin-bottom: 14px;
+}
+
 .feature-pill {
   padding: 12px 15px;
   border: 1px solid rgba(71, 85, 105, 0.14);
@@ -328,7 +335,8 @@ textarea::placeholder {
 .feature-pill:hover,
 .tab-button:hover,
 .primary-cta:hover,
-.sheet-option:hover {
+.sheet-option:hover,
+.suggestion-option:hover {
   transform: translateY(-1px);
 }
 
@@ -361,6 +369,68 @@ textarea::placeholder {
   margin: 10px 4px 0;
   color: var(--accent);
   font-size: 13px;
+}
+
+.suggestion-card {
+  border-radius: 24px;
+  background: #fff;
+  border: 1px solid rgba(71, 85, 105, 0.14);
+  box-shadow: var(--shadow);
+  padding: 16px;
+  margin-top: 2px;
+}
+
+.suggestion-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.suggestion-card-title {
+  margin: 0;
+  color: #677083;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+}
+
+.suggestion-card-close {
+  width: 28px;
+  height: 28px;
+  border-radius: 999px;
+  border: 0;
+  background: transparent;
+  color: #677083;
+  font-size: 24px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.suggestion-card-list {
+  display: grid;
+}
+
+.suggestion-option {
+  width: 100%;
+  text-align: left;
+  border: 0;
+  border-top: 1px solid rgba(71, 85, 105, 0.12);
+  background: transparent;
+  color: #13161b;
+  padding: 18px 0;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  cursor: pointer;
+}
+
+.suggestion-option:first-child {
+  border-top: 0;
+  padding-top: 10px;
 }
 
 .hidden {

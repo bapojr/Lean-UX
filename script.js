@@ -4,15 +4,15 @@ const inputFocusTarget = document.querySelector("#input-focus-target");
 const tabButtons = Array.from(document.querySelectorAll(".tab-button"));
 const panelViews = Array.from(document.querySelectorAll(".panel-view"));
 const sheetOverlay = document.querySelector("#sheet-overlay");
-const suggestionSheet = document.querySelector("#suggestion-sheet");
 const moreSheet = document.querySelector("#more-sheet");
-const sheetTitle = document.querySelector("#sheet-title");
-const sheetList = document.querySelector("#sheet-list");
-const closeSheetButton = document.querySelector("#close-sheet");
 const closeMoreButton = document.querySelector("#close-more");
 const checksContainer = document.querySelector("#checks-pills");
 const checksCta = document.querySelector("#checks-cta");
 const checksNote = document.querySelector("#checks-note");
+const inlineSuggestionCard = document.querySelector("#inline-suggestion-card");
+const inlineSuggestionTitle = document.querySelector("#inline-suggestion-title");
+const inlineSuggestionList = document.querySelector("#inline-suggestion-list");
+const inlineSuggestionClose = document.querySelector("#inline-suggestion-close");
 
 const chatOptions = {
   Rewrite: [
@@ -174,55 +174,46 @@ function openOverlay() {
 }
 
 function closeOverlayIfNeeded() {
-  const suggestionOpen = suggestionSheet.classList.contains("open");
   const moreOpen = moreSheet.classList.contains("open");
 
-  if (!suggestionOpen && !moreOpen) {
+  if (!moreOpen) {
     sheetOverlay.classList.add("hidden");
   }
 }
 
 function openSuggestionSheet(title, options) {
-  openOverlay();
-  moreSheet.classList.add("hidden");
-  moreSheet.classList.remove("open");
-  moreSheet.setAttribute("aria-hidden", "true");
-
-  sheetTitle.textContent = title;
-  sheetList.innerHTML = "";
+  inlineSuggestionTitle.textContent = title;
+  inlineSuggestionList.innerHTML = "";
 
   options.forEach((option) => {
     const button = document.createElement("button");
     button.type = "button";
-    button.className = "sheet-option";
+    button.className = "suggestion-option";
     button.textContent = option;
     button.addEventListener("click", () => {
       promptInput.value = option;
       closeSuggestionSheet();
       promptInput.focus();
     });
-    sheetList.appendChild(button);
+    inlineSuggestionList.appendChild(button);
   });
 
-  suggestionSheet.classList.remove("hidden");
-  requestAnimationFrame(() => suggestionSheet.classList.add("open"));
-  suggestionSheet.setAttribute("aria-hidden", "false");
+  inlineSuggestionCard.classList.remove("hidden");
+  inlineSuggestionCard.setAttribute("aria-hidden", "false");
 }
 
 function closeSuggestionSheet() {
-  suggestionSheet.classList.remove("open");
-  suggestionSheet.setAttribute("aria-hidden", "true");
-  window.setTimeout(() => {
-    suggestionSheet.classList.add("hidden");
-    closeOverlayIfNeeded();
-  }, 220);
+  inlineSuggestionCard.classList.add("hidden");
+  inlineSuggestionCard.setAttribute("aria-hidden", "true");
+
+  document
+    .querySelectorAll(".single-select .feature-pill")
+    .forEach((item) => item.classList.remove("active"));
 }
 
 function openMoreSheet() {
   openOverlay();
-  suggestionSheet.classList.add("hidden");
-  suggestionSheet.classList.remove("open");
-  suggestionSheet.setAttribute("aria-hidden", "true");
+  closeSuggestionSheet();
 
   moreSheet.classList.remove("hidden");
   requestAnimationFrame(() => moreSheet.classList.add("open"));
@@ -247,6 +238,7 @@ function switchTab(nextTab) {
 
   activeTab = nextTab;
   closeMoreSheet();
+  closeSuggestionSheet();
 
   tabButtons.forEach((button) => button.classList.toggle("active", button.dataset.tab === nextTab));
 
@@ -266,12 +258,11 @@ tabButtons.forEach((button) => {
 });
 
 sheetOverlay.addEventListener("click", () => {
-  closeSuggestionSheet();
   closeMoreSheet();
 });
 
-closeSheetButton.addEventListener("click", closeSuggestionSheet);
 closeMoreButton.addEventListener("click", closeMoreSheet);
+inlineSuggestionClose.addEventListener("click", closeSuggestionSheet);
 
 checksCta.addEventListener("click", () => {
   if (!checksCta.disabled) {

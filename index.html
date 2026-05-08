@@ -76,20 +76,19 @@
             </div>
             <div class="pill-row horizontal-scroll single-select" id="illustrate-pills"></div>
           </div>
+
+          <section class="suggestion-card hidden" id="inline-suggestion-card" aria-hidden="true">
+            <div class="suggestion-card-header">
+              <p class="suggestion-card-title" id="inline-suggestion-title">Suggestions</p>
+              <button class="suggestion-card-close" id="inline-suggestion-close" type="button" aria-label="Close suggestions">×</button>
+            </div>
+            <div class="suggestion-card-list" id="inline-suggestion-list"></div>
+          </section>
         </section>
       </main>
     </div>
 
     <div class="overlay hidden" id="sheet-overlay"></div>
-
-    <section class="bottom-sheet hidden" id="suggestion-sheet" aria-hidden="true">
-      <div class="sheet-handle"></div>
-      <div class="sheet-header">
-        <h2 id="sheet-title">Suggestions</h2>
-        <button class="close-button" id="close-sheet" type="button" aria-label="Close panel">×</button>
-      </div>
-      <div class="sheet-list" id="sheet-list"></div>
-    </section>
 
     <section class="bottom-sheet hidden" id="more-sheet" aria-hidden="true">
       <div class="sheet-handle"></div>
