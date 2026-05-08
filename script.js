@@ -2,6 +2,7 @@ const promptInput = document.querySelector("#prompt-input");
 const greeting = document.querySelector("#greeting");
 const inputFocusTarget = document.querySelector("#input-focus-target");
 const chatCard = document.querySelector(".chat-card");
+const phoneFrame = document.querySelector(".phone-frame");
 const sendCta = document.querySelector("#send-cta");
 const illustrateTools = document.querySelector("#illustrate-tools");
 const tabButtons = Array.from(document.querySelectorAll(".tab-button"));
@@ -211,6 +212,26 @@ function openSuggestionSheet(title, options) {
 
   inlineSuggestionCard.classList.remove("hidden");
   inlineSuggestionCard.setAttribute("aria-hidden", "false");
+
+  requestAnimationFrame(() => {
+    const cardTop = inlineSuggestionCard.offsetTop;
+    const cardBottom = cardTop + inlineSuggestionCard.offsetHeight;
+    const frameTop = phoneFrame.scrollTop;
+    const frameBottom = frameTop + phoneFrame.clientHeight;
+    const bottomPadding = 20;
+
+    if (cardBottom + bottomPadding > frameBottom) {
+      phoneFrame.scrollTo({
+        top: cardBottom - phoneFrame.clientHeight + bottomPadding,
+        behavior: "smooth",
+      });
+    } else if (cardTop < frameTop) {
+      phoneFrame.scrollTo({
+        top: Math.max(cardTop - 12, 0),
+        behavior: "smooth",
+      });
+    }
+  });
 }
 
 function closeSuggestionSheet() {
