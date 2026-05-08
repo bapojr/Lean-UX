@@ -16,6 +16,38 @@
     <div class="app-shell">
       <main class="phone-frame">
         <header class="topbar">
+          <div class="brand-mark" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="24" viewBox="0 0 16 24" fill="none">
+              <g clip-path="url(#clip0_498_13947)">
+                <path opacity="0.1" d="M8.06067 24C11.7682 24 14.7737 23.7747 14.7737 23.4968C14.7737 23.219 11.7682 22.9937 8.06067 22.9937C4.35317 22.9937 1.34766 23.219 1.34766 23.4968C1.34766 23.7747 4.35317 24 8.06067 24Z" fill="#0052E6"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M1.3426 0H8.05561L16.1125 8.05686V20.1416C16.1125 20.8837 15.5107 21.4842 14.7699 21.4842H1.3426C0.600507 21.4842 0 20.8824 0 20.1416V1.3426C0 0.600504 0.601773 0 1.3426 0Z" fill="#0060FF"/>
+                <g opacity="0.1">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M1.3426 0H8.05561V21.4829H1.3426C0.600507 21.4829 0 20.8811 0 20.1403V1.3426C0 0.600504 0.601773 0 1.3426 0Z" fill="url(#paint0_linear_498_13947)"/>
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M8.05859 0L16.1155 8.0556L8.05859 10.0696V0Z" fill="url(#paint1_linear_498_13947)"/>
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M1.34387 0H8.05686L0 8.05686V1.34387C0 0.60177 0.60177 0.00126353 1.3426 0.00126353L1.34387 0Z" fill="url(#paint2_linear_498_13947)"/>
+                </g>
+                <path opacity="0.35" fill-rule="evenodd" clip-rule="evenodd" d="M8.05859 0L16.1155 8.05686H9.40241C8.66033 8.05686 8.05985 7.45512 8.05985 6.7143V0.00126353L8.05859 0Z" fill="white"/>
+                <path d="M2.87254 13.4223C3.23031 13.0923 3.81059 13.0923 4.16837 13.4223C6.34031 15.4261 9.86243 15.4261 12.0344 13.4223C12.3922 13.0923 12.9724 13.0923 13.3302 13.4223C13.688 13.7522 13.688 14.287 13.3302 14.617C10.4427 17.2807 5.76129 17.2807 2.8738 14.617C2.51603 14.287 2.51603 13.7522 2.8738 13.4223H2.87254Z" fill="white"/>
+              </g>
+              <defs>
+                <linearGradient id="paint0_linear_498_13947" x1="4.00126" y1="10.6637" x2="7.79606" y2="20.0558" gradientUnits="userSpaceOnUse">
+                  <stop stop-opacity="0"/>
+                  <stop offset="1"/>
+                </linearGradient>
+                <linearGradient id="paint1_linear_498_13947" x1="8.00927" y1="5.00253" x2="16.1408" y2="5.00253" gradientUnits="userSpaceOnUse">
+                  <stop stop-opacity="0"/>
+                  <stop offset="1"/>
+                </linearGradient>
+                <linearGradient id="paint2_linear_498_13947" x1="-0.00252844" y1="3.99747" x2="8.0076" y2="3.99747" gradientUnits="userSpaceOnUse">
+                  <stop stop-opacity="0"/>
+                  <stop offset="1"/>
+                </linearGradient>
+                <clipPath id="clip0_498_13947">
+                  <rect width="16" height="24" fill="white"/>
+                </clipPath>
+              </defs>
+            </svg>
+          </div>
           <button class="icon-button" aria-label="Open sidebar">
             <span class="icon">☰</span>
           </button>
@@ -77,28 +109,16 @@
 
         <section class="tab-panels">
           <div class="panel-view active" data-panel="chat">
-            <div class="section-copy">
-              <p class="section-label">Start with a prompt</p>
-              <p class="section-subtle">Choose a common writing task to jump in faster.</p>
-            </div>
             <div class="pill-row horizontal-scroll single-select" id="chat-pills"></div>
           </div>
 
           <div class="panel-view" data-panel="checks">
-            <div class="section-copy">
-              <p class="section-label">Quality checks</p>
-              <p class="section-subtle">Pick one or more checks before continuing.</p>
-            </div>
             <div class="pill-row multi-select" id="checks-pills"></div>
             <button class="primary-cta" id="checks-cta" type="button">Run Selected Checks</button>
             <p class="tooltip-note hidden" id="checks-note">Select at least one check to continue</p>
           </div>
 
           <div class="panel-view" data-panel="illustrate">
-            <div class="section-copy">
-              <p class="section-label">Turn ideas into visuals</p>
-              <p class="section-subtle">Select a format to get tailored starting prompts.</p>
-            </div>
             <div class="pill-row horizontal-scroll single-select" id="illustrate-pills"></div>
           </div>
 

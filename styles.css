@@ -66,19 +66,25 @@ body {
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  gap: 16px;
+  height: 40px;
   margin-bottom: 18px;
+  background: #fff;
 }
 
 .icon-button {
-  width: 40px;
-  height: 40px;
-  border-radius: 14px;
-  background: rgba(255, 255, 255, 0.82);
-  box-shadow: inset 0 0 0 1px var(--stroke);
+  width: 24px;
+  height: 24px;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  padding: 0;
 }
 
 .icon {
-  font-size: 20px;
+  font-size: 28px;
+  line-height: 1;
+  color: #677083;
 }
 
 .icon-button,
@@ -92,6 +98,21 @@ body {
 
 .hero {
   margin-bottom: 18px;
+}
+
+.brand-mark {
+  width: 14px;
+  height: 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+}
+
+.brand-mark svg {
+  width: 14px;
+  height: 18px;
+  display: block;
 }
 
 .hero h1 {
@@ -347,23 +368,6 @@ textarea::placeholder {
   }
 }
 
-.section-copy {
-  margin-bottom: 14px;
-}
-
-.section-label {
-  margin: 0 0 4px;
-  font-weight: 700;
-  font-size: 14px;
-}
-
-.section-subtle {
-  margin: 0;
-  color: var(--muted);
-  font-size: 14px;
-  line-height: 1.45;
-}
-
 .pill-row {
   display: flex;
   gap: 10px;
@@ -375,7 +379,7 @@ textarea::placeholder {
 }
 
 .single-select {
-  margin-bottom: 14px;
+  margin-bottom: 10px;
 }
 
 .feature-pill {
