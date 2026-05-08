@@ -80,7 +80,8 @@ let selectedChecks = new Set(checksOptions);
 
 function updateSendCtaState() {
   const hasText = promptInput.value.trim().length > 0;
-  sendCta.classList.toggle("active", hasText);
+  const alwaysActive = activeTab === "chat" || activeTab === "illustrate";
+  sendCta.classList.toggle("active", alwaysActive || hasText);
 }
 
 function setGreeting() {
@@ -253,6 +254,7 @@ function switchTab(nextTab) {
   chatCard.classList.toggle("mode-illustrate", nextTab === "illustrate");
   checksUploadCard.setAttribute("aria-hidden", nextTab === "checks" ? "false" : "true");
   illustrateTools.setAttribute("aria-hidden", nextTab === "illustrate" ? "false" : "true");
+  updateSendCtaState();
 
   tabButtons.forEach((button) => button.classList.toggle("active", button.dataset.tab === nextTab));
 

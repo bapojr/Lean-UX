@@ -107,6 +107,49 @@ body {
   margin-bottom: 18px;
 }
 
+.plan-banner {
+  padding: 8px 12px 10px;
+}
+
+.plan-copy {
+  margin: 0 0 8px;
+  color: #677083;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.prime-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  border: 0;
+  background: transparent;
+  padding: 0;
+  color: #173a82;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px;
+  cursor: pointer;
+}
+
+.prime-icon {
+  width: 18px;
+  height: 16px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.prime-icon svg {
+  width: 18px;
+  height: 16px;
+  display: block;
+}
+
 .brand-mark {
   width: 14px;
   height: 18px;
