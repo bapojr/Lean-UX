@@ -119,7 +119,7 @@ body {
 }
 
 .input-wrap:focus-within {
-  box-shadow: 0 22px 54px rgba(54, 72, 101, 0.18), 0 0 0 2px rgba(217, 96, 53, 0.16);
+  box-shadow: 0 22px 54px rgba(54, 72, 101, 0.18), 0 0 0 2px #0054f1;
 }
 
 textarea {
@@ -140,10 +140,8 @@ textarea::placeholder {
 }
 
 .input-toolbar {
-  display: grid;
-  grid-template-columns: 40px 1fr 40px;
+  display: flex;
   align-items: center;
-  gap: 8px;
   margin-top: 10px;
 }
 
@@ -154,17 +152,6 @@ textarea::placeholder {
   background: #f7f8fb;
   box-shadow: inset 0 0 0 1px rgba(71, 85, 105, 0.1);
   font-size: 22px;
-}
-
-.model-pill {
-  justify-self: center;
-  border: 0;
-  border-radius: 999px;
-  padding: 10px 14px;
-  background: #f7f8fb;
-  color: var(--text);
-  font: inherit;
-  box-shadow: inset 0 0 0 1px rgba(71, 85, 105, 0.1);
 }
 
 .tab-strip {
