@@ -424,14 +424,15 @@ textarea::placeholder {
 
 .feature-pill.selected,
 .feature-pill.active {
-  border-color: transparent;
-  background: var(--pill-dark);
-  color: #fff;
+  border-color: #0062ff;
+  background: #fff;
+  color: #0062ff;
 }
 
 .check-pill.selected {
   background: #fff;
-  color: #16387a;
+  color: #0062ff;
+  border-color: #0062ff;
 }
 
 .check-pill-box svg {
