@@ -25,30 +25,17 @@ const chatOptions = {
   Paraphrase: [
     "Paraphrase this to avoid repetition",
     "Paraphrase and simplify technical jargon",
-    "Paraphrase for a literature review",
+    "Make this more formal and academic",
+    "Trim this paragraph to 50 words",
     "Reword this passage to sound more original",
     "Paraphrase without losing key citations",
   ],
-  Tone: [
-    "Make this more formal and academic",
-    "Adjust tone to sound less aggressive",
-    "Make this persuasive for a grant proposal",
-    "Soften the tone of this critique",
-    "Match the tone of the abstract to the conclusion",
-  ],
-  Trim: [
-    "Trim this paragraph to 50 words",
-    "Remove redundant phrases from this section",
-    "Shorten this conclusion without losing key findings",
-    "Make this abstract more concise",
-    "Cut filler words from this passage",
-  ],
-  Translate: [
-    "Translate this abstract to Spanish",
-    "Translate and preserve academic terminology",
-    "Translate this section to French for a co-author",
-    "Convert British English to American English",
-    "Translate and simplify for a wider audience",
+  Research: [
+    "Summarise the key findings from this research abstract",
+    "Help me identify the research gap in this introduction",
+    "Turn these notes into a literature review outline",
+    "Extract the main methodology steps from this section",
+    "List the core limitations and future research directions",
   ],
 };
 
