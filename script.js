@@ -200,6 +200,7 @@ function openSuggestionSheet(title, options) {
     button.textContent = option;
     button.addEventListener("click", () => {
       promptInput.value = option;
+      updateSendCtaState();
       closeSuggestionSheet();
       promptInput.focus();
     });
