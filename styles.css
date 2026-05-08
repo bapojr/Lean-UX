@@ -59,17 +59,8 @@ body {
 .topbar {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  margin-bottom: 24px;
-}
-
-.icon-button,
-.toolbar-icon,
-.close-button {
-  border: 0;
-  background: transparent;
-  color: var(--text);
-  cursor: pointer;
+  justify-content: flex-start;
+  margin-bottom: 18px;
 }
 
 .icon-button {
@@ -84,17 +75,17 @@ body {
   font-size: 20px;
 }
 
-.hero {
-  margin-bottom: 18px;
+.icon-button,
+.toolbar-icon,
+.close-button {
+  border: 0;
+  background: transparent;
+  color: var(--text);
+  cursor: pointer;
 }
 
-.eyebrow {
-  margin: 0 0 8px;
-  color: var(--accent);
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+.hero {
+  margin-bottom: 18px;
 }
 
 .hero h1 {
