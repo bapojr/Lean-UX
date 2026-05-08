@@ -2,6 +2,7 @@ const promptInput = document.querySelector("#prompt-input");
 const greeting = document.querySelector("#greeting");
 const inputFocusTarget = document.querySelector("#input-focus-target");
 const chatCard = document.querySelector(".chat-card");
+const sendCta = document.querySelector("#send-cta");
 const tabButtons = Array.from(document.querySelectorAll(".tab-button"));
 const panelViews = Array.from(document.querySelectorAll(".panel-view"));
 const sheetOverlay = document.querySelector("#sheet-overlay");
@@ -75,6 +76,11 @@ const checksOptions = [
 
 let activeTab = "chat";
 let selectedChecks = new Set(checksOptions);
+
+function updateSendCtaState() {
+  const hasText = promptInput.value.trim().length > 0;
+  sendCta.classList.toggle("active", hasText);
+}
 
 function setGreeting() {
   const hours = new Date().getHours();
@@ -257,6 +263,8 @@ inputFocusTarget.addEventListener("click", (event) => {
   }
 });
 
+promptInput.addEventListener("input", updateSendCtaState);
+
 tabButtons.forEach((button) => {
   button.addEventListener("click", () => switchTab(button.dataset.tab));
 });
@@ -271,6 +279,7 @@ inlineSuggestionClose.addEventListener("click", closeSuggestionSheet);
 checksCta.addEventListener("click", () => {
   if (!checksCta.disabled) {
     promptInput.value = `Run these checks: ${Array.from(selectedChecks).join(", ")}`;
+    updateSendCtaState();
     promptInput.focus();
   }
 });
@@ -279,3 +288,4 @@ setGreeting();
 populateSingleSelectPills("#chat-pills", chatOptions);
 populateSingleSelectPills("#illustrate-pills", illustrateOptions);
 renderChecks();
+updateSendCtaState();

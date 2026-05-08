@@ -146,16 +146,45 @@ textarea::placeholder {
 .input-toolbar {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   margin-top: 10px;
 }
 
 .toolbar-icon {
-  width: 40px;
-  height: 40px;
-  border-radius: 14px;
+  width: 30px;
+  height: 30px;
+  border-radius: 6px;
   background: #f7f8fb;
   box-shadow: inset 0 0 0 1px rgba(71, 85, 105, 0.1);
-  font-size: 22px;
+  font-size: 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.send-cta {
+  display: flex;
+  width: 30px;
+  height: 30px;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  border: 0;
+  border-radius: 6px;
+  background: #d8e0ee;
+  cursor: pointer;
+  padding: 0 0 0 7px;
+  transition: background-color 160ms ease, transform 160ms ease;
+}
+
+.send-cta svg {
+  width: 17px;
+  height: 13px;
+  display: block;
+}
+
+.send-cta.active {
+  background: #0062ff;
 }
 
 .checks-upload-card {
