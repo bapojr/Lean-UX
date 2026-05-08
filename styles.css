@@ -32,6 +32,7 @@ body {
 body {
   display: flex;
   justify-content: center;
+  overflow: hidden;
 }
 
 .app-shell {
@@ -40,6 +41,7 @@ body {
   padding: 0;
   display: flex;
   justify-content: center;
+  align-items: flex-start;
 }
 
 .phone-frame {
@@ -48,10 +50,11 @@ body {
   margin: 0 auto;
   padding: 0 0 24px;
   background: var(--bg);
-  min-height: 100vh;
+  height: 667px;
   display: flex;
   flex-direction: column;
-  overflow: hidden;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .topbar,
