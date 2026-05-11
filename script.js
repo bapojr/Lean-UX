@@ -22,9 +22,11 @@ const inlineSuggestionClose = document.querySelector("#inline-suggestion-close")
 const chatOptions = {
   Write: [
     "Write a paragraph on this research topic",
+    "Write a conclusion section for this paper",
+    "Write an email about this project update",
     "Use these notes and develop a clear structure",
     "Draft a literature review from these points",
-    "Write a conclusion section for this paper",
+    "Draft a response based on these notes",
     "Suggest thesis statement ideas for this topic",
   ],
   Paraphrase: [
