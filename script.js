@@ -20,7 +20,7 @@ const inlineSuggestionList = document.querySelector("#inline-suggestion-list");
 const inlineSuggestionClose = document.querySelector("#inline-suggestion-close");
 
 const chatOptions = {
-  Rewrite: [
+  Write: [
     "Rewrite this paragraph for a journal introduction",
     "Make this sentence more formal",
     "Rewrite for a non-expert audience",
