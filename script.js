@@ -21,11 +21,11 @@ const inlineSuggestionClose = document.querySelector("#inline-suggestion-close")
 
 const chatOptions = {
   Write: [
-    "Rewrite this paragraph for a journal introduction",
-    "Make this sentence more formal",
-    "Rewrite for a non-expert audience",
-    "Improve clarity without changing meaning",
-    "Rewrite in active voice",
+    "Write a paragraph on this research topic",
+    "Use these notes and develop a clear structure",
+    "Draft a literature review from these points",
+    "Write a conclusion section for this paper",
+    "Suggest thesis statement ideas for this topic",
   ],
   Paraphrase: [
     "Paraphrase this to avoid repetition",
